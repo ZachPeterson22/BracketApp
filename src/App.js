@@ -1,25 +1,66 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Brackets from './components/bracket';
 import './App.css';
 
 class App extends Component {
+
+  state = {
+    brackets: [
+      {
+        id: 1,
+        title: "First",
+        winner: false
+      },
+      {
+        id: 2,
+        title: "Second",
+        winner: true
+      },
+      {
+        id: 3,
+        title: "Third",
+        winner: false
+      },
+      {
+        id: 4,
+        title: "Fourth",
+        winner: true
+      },
+      {
+        id: 5,
+        title: "Fifth",
+        winner: false
+      },
+      {
+        id: 6,
+        title: "Sixth",
+        winner: true
+      },
+      {
+        id: 7,
+        title: "Seventh",
+        winner: false
+      },
+      {
+        id: 8,
+        title: "Eigth",
+        winner: true
+      },
+      // {
+      //   id: 9,
+      //   title: "Ninth"
+      // },
+      // {
+      //   id: 10,
+      //   title: "Tenth"
+      // }
+    ]
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Brackets brackets={this.state.brackets} />
       </div>
     );
   }
